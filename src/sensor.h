@@ -1,9 +1,12 @@
 #include <stdio.h>
 
-typedef unsigned int uint;
-typedef unsigned char byte;
+class ADConvertor {
+public:
+  // analog read from specified channel and convert it to voltage
+  virtual double sample() = 0;
+};
 
-void init();
+void initSensor();
 
 double get_battery_voltage();
 uint get_brightness();
